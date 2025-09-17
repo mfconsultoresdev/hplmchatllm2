@@ -1,0 +1,57 @@
+
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/.build": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/dist/**": true,
+    "**/.build/**": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["classnames\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "prisma.showPrismaDataPlatformNotification": false,
+  "prisma.fileWatcher": true,
+  "sqltools.connections": [
+    {
+      "name": "Hotel PMS Database",
+      "driver": "PostgreSQL",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "database": "hotel_pms_dev",
+      "username": "usuario",
+      "askForPassword": true
+    }
+  ]
+}

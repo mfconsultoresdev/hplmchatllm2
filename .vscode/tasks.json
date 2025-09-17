@@ -1,0 +1,60 @@
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "yarn dev",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell", 
+      "command": "yarn build",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      }
+    },
+    {
+      "label": "prisma:studio",
+      "type": "shell",
+      "command": "npx prisma studio",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      }
+    },
+    {
+      "label": "prisma:generate",
+      "type": "shell",
+      "command": "npx prisma generate",
+      "group": "build", 
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      }
+    },
+    {
+      "label": "seed",
+      "type": "shell",
+      "command": "npm run seed",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      }
+    }
+  ]
+}

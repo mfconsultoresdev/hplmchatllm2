@@ -1,0 +1,134 @@
+
+{
+  "folders": [
+    {
+      "name": "🏨 Hotel PMS - Root",
+      "path": "."
+    },
+    {
+      "name": "📱 App (Next.js)",
+      "path": "./app"
+    },
+    {
+      "name": "🗄️ Database (Prisma)",
+      "path": "./app/prisma"
+    },
+    {
+      "name": "🧩 Components",
+      "path": "./app/components"
+    },
+    {
+      "name": "📄 Pages & Routes",
+      "path": "./app/app"
+    },
+    {
+      "name": "🔌 API Routes",
+      "path": "./app/api"
+    },
+    {
+      "name": "📚 Documentation",
+      "path": ".",
+      "files": ["*.md", "*.pdf"]
+    }
+  ],
+  "settings": {
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/dist": true,
+      "**/.build": true
+    },
+    "files.exclude": {
+      "**/.git": false,
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/dist": true
+    },
+    "eslint.workingDirectories": ["app"],
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "tailwindCSS.includeLanguages": {
+      "typescript": "javascript",
+      "typescriptreact": "javascript"
+    },
+    "prisma.showPrismaDataPlatformNotification": false,
+    "prisma.fileWatcher": true
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🚀 Start Development",
+        "type": "shell",
+        "command": "yarn dev",
+        "group": "build",
+        "options": {
+          "cwd": "${workspaceFolder}/app"
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      },
+      {
+        "label": "📊 Open Prisma Studio",
+        "type": "shell",
+        "command": "npx prisma studio",
+        "group": "build",
+        "options": {
+          "cwd": "${workspaceFolder}/app"
+        }
+      },
+      {
+        "label": "🧹 Fresh Setup",
+        "type": "shell",
+        "command": "./scripts/setup-local.sh",
+        "group": "build",
+        "options": {
+          "cwd": "${workspaceFolder}"
+        }
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🐛 Debug Next.js App",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/app/node_modules/.bin/next",
+        "args": ["dev"],
+        "cwd": "${workspaceFolder}/app",
+        "runtimeArgs": ["--inspect"],
+        "env": {
+          "NODE_OPTIONS": "--inspect"
+        }
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode", 
+      "prisma.prisma",
+      "ms-vscode.vscode-typescript-next",
+      "streetsidesoftware.code-spell-checker",
+      "yoavbls.pretty-ts-errors",
+      "formulahendry.auto-rename-tag",
+      "christian-kohler.path-intellisense",
+      "mtxr.sqltools",
+      "mtxr.sqltools-driver-pg"
+    ]
+  }
+}

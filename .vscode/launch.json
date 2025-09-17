@@ -1,0 +1,43 @@
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/app",
+      "runtimeArgs": ["--inspect"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      }
+    },
+    {
+      "name": "Next.js: debug client-side",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/app"
+    },
+    {
+      "name": "Next.js: debug full stack",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/app",
+      "runtimeArgs": ["--inspect"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      },
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env*
+
+# Generated files
+.prisma/
+prisma/migrations/
+
+# Logs
+*.log
+
+# Cache directories
+.cache/
+.build/
+
+# OS files
+.DS_Store
+Thumbs.db
