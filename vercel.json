@@ -2,24 +2,5 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "cd app && npx prisma generate && yarn build",
-  "devCommand": "cd app && yarn dev",
-  "installCommand": "cd app && yarn install --frozen-lockfile",
-  "outputDirectory": "app/.next",
-  "functions": {
-    "app/app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "regions": ["iad1"],
-  "env": {
-    "NODE_ENV": "production",
-    "YARN_ENABLE_IMMUTABLE_INSTALLS": "false"
-  },
-  "build": {
-    "env": {
-      "ENABLE_EXPERIMENTAL_COREPACK": "1",
-      "YARN_ENABLE_IMMUTABLE_INSTALLS": "false"
-    }
-  }
+  "rootDirectory": "app"
 }
